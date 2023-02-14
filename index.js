@@ -48,7 +48,7 @@ function getRandomCard() {
 }
 //start the game , take 2 card 
 function startGame() {
-    player.chips = 0
+    player.chips = 10
     isAlive = true
     let firstCard = getRandomCard()
     let secondCard = getRandomCard()
@@ -71,13 +71,13 @@ function renderGame() {
     if (sum <= 20) {
         message = "Do you want to draw a new card?"
     } else if (sum === 21) {
+        player.chips = 100
         message = "You've got Blackjack!"
         hasBlackJack = true
-        player.chips = 100
     } else {
+        player.chips = -100
         message = "You're out of the game!"
         isAlive = false
-        player.chips = -100
     }
     messageEl.textContent = message
 }
