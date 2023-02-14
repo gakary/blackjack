@@ -1,10 +1,10 @@
 //player informations
 let player = {
     name: "Player 1",
+    chips: 0
 }
 
-//chips
-let chips = 0;
+
 
 //card value array
 let cards = []
@@ -31,7 +31,7 @@ let cardsEl = document.getElementById("cards-el")
 let playerEl = document.getElementById("player-el")
 
 //print the player informations from player object
-playerEl.textContent = player.name + ": $" + chips
+playerEl.textContent = player.name + ": $" + player.chips
 
 //random the value
 function getRandomCard() {
@@ -50,7 +50,6 @@ function getRandomCard() {
 }
 //start the game , take 2 card 
 function startGame() {
-    chips = 0
     isAlive = true
     let firstCard = getRandomCard()
     let secondCard = getRandomCard()
@@ -73,11 +72,9 @@ function renderGame() {
     if (sum <= 20) {
         message = "Do you want to draw a new card?"
     } else if (sum === 21) {
-        chips = 100
         message = "You've got Blackjack!"
         hasBlackJack = true
     } else {
-        chips = -100
         message = "You're out of the game!"
         isAlive = false
     }
