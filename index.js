@@ -19,6 +19,9 @@ let isAlive = false
 //to alert the player
 let message = ""
 
+//check game start
+let gameStart = false;
+
 //catch the HTML elements tag
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
@@ -45,12 +48,17 @@ function getRandomCard() {
 }
 //start the game , take 2 card 
 function startGame() {
-    isAlive = true
-    for(let i = 0 ; i < 2 ; i++){
-        let tmp = getRandomCard()
-        cards.push(tmp);
-        sum += tmp;
+    if(gameStart == false){
+        isAlive = true
+        for(let i = 0 ; i < 2 ; i++){
+            let tmp = getRandomCard()
+            cards.push(tmp);
+            sum += tmp;
+        }
+    }else{
+        message = "You've already started the game !"
     }
+   
     renderGame()
 }
 
