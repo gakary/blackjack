@@ -54,16 +54,17 @@ function startGame() {
     let secondCard = getRandomCard()
     cards = [firstCard, secondCard]
     sum = firstCard + secondCard
-    if(isAlive === true){
-        startEl.textContent = "NEW GAME"
-    }else{
-        startEl.textContent = "START GAME"
-    }
     renderGame()
 }
 
 
 function renderGame() {
+    
+    if(isAlive === true){
+        startEl.textContent = "NEW GAME"
+    }else{
+        startEl.textContent = "START GAME"
+    }
 
     //print the cards array : current card's value
     cardsEl.textContent = "Cards: "
