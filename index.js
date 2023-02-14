@@ -27,6 +27,7 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 let playerEl = document.getElementById("player-el")
+let startEl = document.getElementById("start-el")
 
 //print the player informations from player object
 playerEl.textContent = player.name + ": $" + player.chips
@@ -53,6 +54,11 @@ function startGame() {
     let secondCard = getRandomCard()
     cards = [firstCard, secondCard]
     sum = firstCard + secondCard
+    if(isAlive === true){
+        startEl.textContent = "NEW GAME"
+    }else{
+        startEl.textContent = "START GAME"
+    }
     renderGame()
 }
 
