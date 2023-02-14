@@ -1,7 +1,7 @@
 //player informations
 let player = {
-    name: "Gary",
-    chips: 150
+    name: "Player 1",
+    chips: 0
 }
 
 //card value array
@@ -48,6 +48,7 @@ function getRandomCard() {
 }
 //start the game , take 2 card 
 function startGame() {
+    player.chips = 0
     isAlive = true
     let firstCard = getRandomCard()
     let secondCard = getRandomCard()
@@ -72,9 +73,11 @@ function renderGame() {
     } else if (sum === 21) {
         message = "You've got Blackjack!"
         hasBlackJack = true
+        player.chips = 100
     } else {
         message = "You're out of the game!"
         isAlive = false
+        player.chips = -100
     }
     messageEl.textContent = message
 }
