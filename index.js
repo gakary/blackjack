@@ -48,19 +48,14 @@ function getRandomCard() {
 }
 //start the game , take 2 card 
 function startGame() {
-    if(gameStart == false){
-        isAlive = true
-        for(let i = 0 ; i < 2 ; i++){
-            let tmp = getRandomCard()
-            cards.push(tmp);
-            sum += tmp;
-        }
-    }else{
-        message = "You've already started the game !"
-    }
-   
+    isAlive = true
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard
     renderGame()
 }
+
 
 function renderGame() {
 
