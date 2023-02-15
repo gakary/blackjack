@@ -3,7 +3,7 @@ blackjack game
 
 
 
-![bj1](https://user-images.githubusercontent.com/66684175/218913047-51e108ce-ae65-42ad-b39a-5f27e8b24d66.PNG)
+![bj1 (2)](https://user-images.githubusercontent.com/66684175/218913415-7bb730b4-0981-4827-b8f9-8aafecb09dcb.PNG)
 
 
 
@@ -19,4 +19,7 @@ Overflow:
 
 BackJack:
 
-![blackjack](https://user-images.githubusercontent.com/66684175/218913204-52b6517f-8d03-49b5-8fe2-2e834c8ef0f5.PNG)
+
+![blackjack (2)](https://user-images.githubusercontent.com/66684175/218913638-f707795e-45b0-49f6-b62d-676fd1f03d2b.PNG)
+
+
